@@ -1,2 +1,2 @@
 # EasyGroceries
-To make people's live easy
+Angular app being transformed to Android app
