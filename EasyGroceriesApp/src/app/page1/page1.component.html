@@ -2,49 +2,51 @@
 
 
 <div class="row">
-        <div class="col-3">.col-sm-4</div>
+        <div class="col-3"></div>
         <div class="col-6">
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="price">Price:</label>
+                        <label for="price">PriceA:</label>
                         <input id="price" [formControl]="txtPriceA" type="number" min="0" class="form-control">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="quantity">Quantity:</label>
+                        <label for="quantity">QuantityA:</label>
                         <input id="quantity" type="number" [formControl]="txtQuantityA" min="0" class="form-control">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-3">.col-sm-4</div>
+        <div class="col-3"></div>
 </div>
 
     <div class="row">
-            <div class="col-3">.col-sm-4</div>
+            <div class="col-3"></div>
             <div class="col-6">
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="priceB">Price:</label>
+                            <label for="priceB">PriceB:</label>
                             <input id="priceB" type="number" [formControl]="txtPriceB" min="0" class="form-control" id="price">
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="quantityB">Quantity:</label>
+                            <label for="quantityB">QuantityB:</label>
                             <input price="quantityB" type="number" [formControl]="txtQuantityB" min="0"  class="form-control" id="quantity">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-3">.col-sm-4</div>
+            <div class="col-3"></div>
         </div>
 
         <h2>{{ clickMessage }}</h2>
+        <h3>{{ logResult }}</h3>
         
+
         <p><button type="button" class="btn btn-primary" (click)="Compare()">Compare</button>
         </p>
         <button type="button" class="btn btn-primary" (click)="Clear()">Clear</button>

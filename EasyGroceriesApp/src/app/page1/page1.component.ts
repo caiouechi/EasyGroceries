@@ -14,22 +14,40 @@ export class Page1Component implements OnInit {
   txtQuantityB = new FormControl('');
 
   clickMessage = '';
-  PriceA : number = 0;
-  QuantityA : number = 0;
-  PriceB : number = 0;
-  QuantityB : number = 0;
-  valorRandomico : number = 3;
+  logResult = '';
+  PriceA: number = 0;
+  QuantityA: number = 0;
+  PriceB: number = 0;
+  QuantityB: number = 0;
+  valorRandomico: number = 3;
 
-  Compare(){
-     this.clickMessage = "Price A = " + this.txtPriceA.value + " Price B = " + this.txtPriceB.value;
+  Compare() {
+    var priceA = parseFloat(this.txtPriceA.value);
+    var quantityA = parseFloat(this.txtQuantityA.value);
+    var totalA = (priceA / quantityA);
+
+    var priceB = parseFloat(this.txtPriceB.value);
+    var quantityB = parseFloat(this.txtQuantityB.value);
+    var totalB = (priceB * quantityB);
+
+    if (totalA > totalB) {
+      var difference = totalA - totalB;
+      this.clickMessage = "Price B is cheaper. You will save " + difference.toFixed(2) + " per unit";
+    } else if (totalA < totalB) {
+      var difference = totalB - totalA;
+      this.clickMessage = "Price A is cheaper. You will save " + difference.toFixed(2) + " per unit";
+    } else {
+      this.clickMessage = "They are the same";
+    }
   }
 
-  Clear(){
+  Clear() {
     this.cleanMessage();
   }
 
-  cleanMessage(){
+  cleanMessage() {
     this.clickMessage = null;
+    this.logResult = null;
   }
 
   constructor() { }
