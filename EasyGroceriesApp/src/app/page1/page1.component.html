@@ -1,20 +1,23 @@
-
-
-
 <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
             <div class="row">
-                <div class="col-6">
+                <div class="col-5">
                     <div class="form-group">
                         <label for="price">PriceA:</label>
                         <input id="price" [formControl]="txtPriceA" type="number" min="0" class="form-control">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                     <div class="form-group">
-                        <label for="quantity">QuantityA:</label>
+                        <label for="quantity">VolumeA:</label>
                         <input id="quantity" type="number" [formControl]="txtQuantityA" min="0" class="form-control">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="multiply">MultiplyA:</label>
+                        <input id="multiply" type="number" [formControl]="txtMultiplyA" min="0" class="form-control">
                     </div>
                 </div>
             </div>
@@ -26,16 +29,22 @@
             <div class="col-3"></div>
             <div class="col-6">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <div class="form-group">
                             <label for="priceB">PriceB:</label>
                             <input id="priceB" type="number" [formControl]="txtPriceB" min="0" class="form-control" id="price">
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-5">
                         <div class="form-group">
-                            <label for="quantityB">QuantityB:</label>
+                            <label for="quantityB">VolumeB:</label>
                             <input price="quantityB" type="number" [formControl]="txtQuantityB" min="0"  class="form-control" id="quantity">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group">
+                            <label for="multiplyB">MultiplyB:</label>
+                            <input id="multiplyB" type="number" [formControl]="txtMultiplyB" min="0" class="form-control">
                         </div>
                     </div>
                 </div>
